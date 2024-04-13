@@ -1,3 +1,3 @@
 #!/bin/bash
-# takes URL and displays the size of the response body
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+#Send request and get the size of the response body in bytes
+curl -sI "$1" | grep 'Content-Length:' | cut -f2 -d' '
